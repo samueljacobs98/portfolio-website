@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Home Page/ Landing -->
-    <div class="home">
+    <div class="home" id="home">
         <div class="home--logo">
             <h3 class="logo--text">Samuel Jacobs</h3>
             <div class="logo--background"></div>
@@ -70,7 +70,7 @@
             </div>
         </div>
         <a href="!#" class="projects--show-more">show more</a>
-        <a href="#about" class="projects--next-section">
+        <a href="#about" class="next-section">
             <img src="./svg/down-arrow.svg" alt="next section">
         </a>
     </div>
@@ -105,7 +105,49 @@
         </div>
 
         <!-- Add image! -->
+        <a href="#contact" class="next-section">
+            <img src="./svg/down-arrow.svg" alt="next section">
+        </a>
     </div>
-    <!-- <div id="contact"></div> -->
+    <!-- Contact Page -->
+    <div class="contact" id="contact">
+            <h3 class="contact--title page--title">Contact Me</h3>
+            <form class="contact-form">
+            <fieldset class="contact-form--field">
+                <legend class="contact-field--input-name">First name</legend>
+                <input class="contact-field--input" type="text" placeholder="John">
+            </fieldset>
+            <fieldset class="contact-form--field">
+                    <legend class="contact-field--input-name">Last name</legend>
+                    <input class="contact-field--input" type="text" placeholder="Doe">
+            </fieldset>
+            <fieldset class="contact-form--field">
+                    <legend class="contact-field--input-name">Email</legend>
+                    <input class="contact-field--input" type="email" placeholder="johndoe@gmail.com">
+            </fieldset>
+            <fieldset class="contact-form--field">
+                    <legend class="contact-field--input-name">Message</legend>
+                    <textarea name="" id="" cols="30" rows="10" class="contact-field--textarea" placeholder="Write your message here..."></textarea>
+            </fieldset>
+            <input type="submit" class="contact-form--submit">
+        </form>
+
+        <div class="social-icons">
+                <a href="https://github.com" class="social-icon">
+                    <img src="./svg/github.svg" alt="github link">
+                </a>
+                <a href="https://linkedin.com" class="social-icon">
+                    <img src="./svg/linkedin.svg" alt="linked in link">
+                </a>
+                <a href="https://instagram.com" class="social-icon">
+                    <img src="./svg/instagram.svg" alt="instagram link">
+                </a>
+        </div>
+    </div>
+
+    <!-- Fixed Elements -->
+    <a href="#home" class="back-to-top">
+        <img src="./svg/to-top.svg" alt="back-to-top">
+    </a>
 </body>
 </html>

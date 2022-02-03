@@ -45,6 +45,18 @@ body {
     text-align: center;
 }
 
+.next-section {
+    margin: 10px 0;
+}
+
+// Fixed Elements
+
+.back-to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+}
+
 // Home page
 .home {
 display: flex;
@@ -186,10 +198,6 @@ height: 100vh;
         color: $orange;
         margin: 8px 0;
     }
-
-    .projects--next-section {
-        margin: 10px 0;
-    }
 }
 
 
@@ -221,3 +229,84 @@ height: 100vh;
         }
     }
 }
+
+// Contact Page
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+
+    .contact-form {
+        // padding: 0 40px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .contact-form--field {
+            border: solid 1px #c4c4c4;
+            border-radius: 5px;
+        
+            width: 100%;
+            max-width: 420px;
+        
+            margin: 8px 0;
+    
+            .contact-field--input-name {
+                margin-left: 10%;
+                padding: 0 5px;
+            
+                font-size: 11px;
+            
+                background-color: #272727;
+            }
+            
+            .contact-field--input, .contact-field--textarea {
+                width: 90%;
+                margin: 0 2px;
+            
+                background-color: transparent;
+            
+                font-size: 14px;
+                padding: 5px;
+            }
+            
+            .contact-field--textarea {
+                border: none;
+            }
+            
+        }
+        .contact-form--submit {
+            background-color: #F06F07;
+            border: none;
+            border-radius: 2px;
+        
+            font-family: 'Red Hat Mono', monospace;;
+            color: #272727;
+            font-size: 14px;
+        
+            width: 66px;
+            height: 28px;
+            margin-top: 10px;
+        
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+
+    .social-icons {
+        width: 150px;
+        margin: 10px 0;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+

@@ -20,6 +20,16 @@ body {
   text-align: center;
 }
 
+.next-section {
+  margin: 10px 0;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -130,9 +140,6 @@ body {
   color: #F06F07;
   margin: 8px 0;
 }
-.projects .projects--next-section {
-  margin: 10px 0;
-}
 
 .about {
   display: flex;
@@ -154,4 +161,59 @@ body {
 }
 .about .about--container .container--item .item--text {
   line-height: 120%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+.contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-form .contact-form--field {
+  border: solid 1px #c4c4c4;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 420px;
+  margin: 8px 0;
+}
+.contact .contact-form .contact-form--field .contact-field--input-name {
+  margin-left: 10%;
+  padding: 0 5px;
+  font-size: 11px;
+  background-color: #272727;
+}
+.contact .contact-form .contact-form--field .contact-field--input, .contact .contact-form .contact-form--field .contact-field--textarea {
+  width: 90%;
+  margin: 0 2px;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 5px;
+}
+.contact .contact-form .contact-form--field .contact-field--textarea {
+  border: none;
+}
+.contact .contact-form .contact-form--submit {
+  background-color: #F06F07;
+  border: none;
+  border-radius: 2px;
+  font-family: "Red Hat Mono", monospace;
+  color: #272727;
+  font-size: 14px;
+  width: 66px;
+  height: 28px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.contact .social-icons {
+  width: 150px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
 }

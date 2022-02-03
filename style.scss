@@ -57,6 +57,37 @@ body {
     bottom: 18px;
 }
 
+// Logo
+.logo {
+    .logo--text {
+        font-family: $font-secondary;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: $mobile-logo-size;
+        
+        text-align: center;
+    
+        width: 140px;
+        height: 82px;
+    
+        margin: 0 auto;
+        padding: 0;
+    
+        position: relative;
+        z-index: 1;
+    }
+    
+    .logo--background {
+        background: radial-gradient(circle, rgba(220,77,7,1) 0%, rgba(39,39,39,0) 100%);    height: 176px;
+        width: 176px;
+        border-radius: 50%;
+    
+        position: relative;
+        z-index: -1;
+        top: -140px;
+    }
+}
+
 // Home page
 .home {
 display: flex;
@@ -64,36 +95,6 @@ flex-direction: column;
 justify-content: space-evenly;
 align-items: center;
 height: 100vh;
-
-    .home--logo {
-        .logo--text {
-            font-family: $font-secondary;
-            font-weight: normal;
-            text-transform: uppercase;
-            font-size: $mobile-logo-size;
-            
-            text-align: center;
-        
-            width: 140px;
-            height: 82px;
-        
-            margin: 0 auto;
-            padding: 0;
-        
-            position: relative;
-            z-index: 1;
-        }
-        
-        .logo--background {
-            background: radial-gradient(circle, rgba(220,77,7,1) 0%, rgba(39,39,39,0) 100%);    height: 176px;
-            width: 176px;
-            border-radius: 50%;
-        
-            position: relative;
-            z-index: -1;
-            top: -140px;
-        }
-    }
 
 
     .main {
@@ -304,6 +305,86 @@ height: 100vh;
 
         display: flex;
         justify-content: space-between;
+    }
+}
+
+// Menu
+.menu {
+    background: $background-colour;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .menu-logo {
+        .menu-logo--text {
+            font-family: "Sen", sans-serif;
+            font-weight: normal;
+            font-size: 30px;
+        
+            color: white;
+        
+            text-transform: uppercase;
+            text-align: center;
+            
+            width: 140px;
+            height: 82px;
+            
+            margin: 0 auto;
+            margin-top: 120px;
+        
+            position: relative;
+            z-index: 1;
+        }
+        .menu-logo--background {
+            background: radial-gradient(circle, #dc4d07 0%, rgba(39, 39, 39, 0) 100%);
+            height: 176px;
+            width: 176px;
+            border-radius: 50%;
+            position: relative;
+            z-index: -1;
+            top: -140px;
+        }
+    }
+    
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        min-height: 272px;
+    
+        position: relative;
+        top: -100px;
+
+        .menu-btn {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        
+        }
+    }
+    
+    
+    .menu-social-icons {
+        width: 150px;
+        margin-top: 40px;
+    
+        display: flex;
+        justify-content: space-between;
+    
+        position: relative;
+        top: -80px;
     }
 }
 

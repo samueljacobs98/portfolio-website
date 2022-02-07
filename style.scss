@@ -51,6 +51,23 @@ body {
 
 // Fixed Elements
 
+.close-btn {
+    visibility: hidden;
+    z-index: 3;
+}
+
+.hamburger, .close-btn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+}
+
+.hamburger:hover, .close-btn:hover {
+    cursor: pointer;
+}
+
+
+
 .back-to-top {
     position: fixed;
     right: 18px;
@@ -149,7 +166,7 @@ height: 100vh;
     .project-container {
         font-family: $font-secondary;
         width: 240px;
-        height: 180px;
+        min-height: 180px;
         margin: 10px 0;
         border: 1px solid #c4c4c4;
         background-color: #272727;
@@ -179,6 +196,30 @@ height: 100vh;
             margin-bottom: 10px;
         }
         
+        .project-links {
+            width: 90%;
+        
+            border: #c4c4c4 solid 1px;
+            padding: 8px;
+            margin: 10px 0;
+            
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        
+            .link-field {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0 10px;
+        
+                .link-icon {
+                    position: relative;
+                    transform: translateY(15%);
+                }
+            }
+        }
+
         .skills {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -312,7 +353,8 @@ height: 100vh;
 .menu {
     background: $background-colour;
 
-    position: absolute;
+    visibility: hidden;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
@@ -321,9 +363,17 @@ height: 100vh;
     width: 100vw;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .close-btn {
+        flex: 0 0 100%;
+
+        position: absolute;
+        right: 18px;
+    }
 
     .menu-logo {
         .menu-logo--text {
@@ -388,6 +438,14 @@ height: 100vh;
     }
 }
 
+// Show Element Class
+.show-element {
+    visibility: visible;
+}
 
+// Remove Display
+.remove-element {
+    display: none;
+}
 
 

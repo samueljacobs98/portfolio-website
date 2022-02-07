@@ -24,12 +24,13 @@ $blue: #A0D2F3;
 
 // Code
 // Setup
-* {
+*, *::before, *::after {
     margin: 0;
     border: 0;
     color: $white;
     font-family: $font-primary;
     font-weight: normal;
+    box-sizing: border-box;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
     color: white;
 }
 
-.page--title {
+.page-title {
     font-size: $mobile-logo-size;
     margin: 10px 0;
     text-align: center;
@@ -76,7 +77,7 @@ body {
 
 // Logo
 .logo {
-    .logo--text {
+    .logo__text {
         font-family: $font-secondary;
         font-weight: normal;
         text-transform: uppercase;
@@ -94,7 +95,7 @@ body {
         z-index: 1;
     }
     
-    .logo--background {
+    .logo__background {
         background: radial-gradient(circle, rgba(220,77,7,1) 0%, rgba(39,39,39,0) 100%);    height: 176px;
         width: 176px;
         border-radius: 50%;
@@ -122,11 +123,11 @@ height: 100vh;
         position: relative;
         top: -20px;
     
-        .main--heading {
+        .main__heading {
             font-size: $mobile-primary-size;
         }
     
-        .main--paragraph {
+        .main__paragraph {
             font-size: $mobile-secondary-size;
     
             height: 65px;
@@ -134,12 +135,12 @@ height: 100vh;
         }
     }
 
-    .home--scroll-link-text {
+    .scroll-link-text {
         font-size: $mobile-tertiary-size;
 
         text-align: center;
 
-        .home--scroll-link {
+        .scroll-link-text__link {
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -177,26 +178,26 @@ height: 100vh;
         flex-direction: column;
         align-items: center;
 
-        .project-container--title {
+        .project-container__title {
             font-size: $mobile-quanternnary;
             font-weight: normal;
             text-decoration: underline;
             margin-top: 10px;
         }
         
-        .project-container--desc {
+        .project-container__desc {
             text-align: center;
             margin: 10px 0;
         }
         
-        .line-break {
+        .project-container__line-break {
             height: 1px;
             width: 80%;
             background-color: white;
             margin-bottom: 10px;
         }
 
-        .skills {
+        .project-container__skills {
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
@@ -211,7 +212,7 @@ height: 100vh;
         }
     }
 
-    .projects--show-more {
+    .projects__show-more {
         text-decoration: underline;
         color: $orange;
         margin: 8px 0;
@@ -226,14 +227,17 @@ height: 100vh;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    max-width: 100vw;
+    
 
-    .about--container {
-        margin: 0 20px;
+    .about-container {
+        padding: 0 20px;
+        max-width: 90vw;
 
-        .container--item {
+        .container-item {
             margin: 30px 0;
             
-            .item--title {
+            .container-item__title {
                 text-decoration: underline;
                 font-weight: bold;
                 font-size: $mobile-quanternnary;
@@ -241,9 +245,14 @@ height: 100vh;
                 margin-bottom: 5px;
             }
     
-            .item--text {
+            .container-item__text {
                 line-height: 120%;
             }
+        }
+
+        .about-image {
+            width: 90%;
+            margin-bottom: 10px;
         }
     }
 }
@@ -265,7 +274,7 @@ height: 100vh;
         justify-content: center;
         align-items: center;
     
-        .contact-form--field {
+        .contact-form__field {
             border: solid 1px #c4c4c4;
             border-radius: 5px;
         
@@ -274,7 +283,7 @@ height: 100vh;
         
             margin: 8px 0;
     
-            .contact-field--input-name {
+            .contact-form__input-name {
                 margin-left: 10%;
                 padding: 0 5px;
             
@@ -283,7 +292,7 @@ height: 100vh;
                 background-color: #272727;
             }
             
-            .contact-field--input, .contact-field--textarea {
+            .contact-form__input, .contact-form__textarea {
                 width: 90%;
                 margin: 0 2px;
             
@@ -293,12 +302,12 @@ height: 100vh;
                 padding: 5px;
             }
             
-            .contact-field--textarea {
+            .contact-form__textarea {
                 border: none;
             }
             
         }
-        .contact-form--submit {
+        .contact-form__submit {
             background-color: #F06F07;
             border: none;
             border-radius: 2px;
@@ -352,7 +361,7 @@ height: 100vh;
     }
 
     .menu-logo {
-        .menu-logo--text {
+        .menu-logo__text {
             font-family: "Sen", sans-serif;
             font-weight: normal;
             font-size: 30px;
@@ -371,7 +380,7 @@ height: 100vh;
             position: relative;
             z-index: 1;
         }
-        .menu-logo--background {
+        .menu-logo__background {
             background: radial-gradient(circle, #dc4d07 0%, rgba(39, 39, 39, 0) 100%);
             height: 176px;
             width: 176px;

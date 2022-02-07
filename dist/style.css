@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;700&family=Sen:wght@400;700;800&display=swap");
-* {
+*, *::before, *::after {
   margin: 0;
   border: 0;
   color: #ffffff;
   font-family: "Red Hat Mono", monospace;
   font-weight: normal;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   color: white;
 }
 
-.page--title {
+.page-title {
   font-size: 30px;
   margin: 10px 0;
   text-align: center;
@@ -45,7 +46,7 @@ body {
   bottom: 18px;
 }
 
-.logo .logo--text {
+.logo .logo__text {
   font-family: "Sen", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
@@ -58,7 +59,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.logo .logo--background {
+.logo .logo__background {
   background: radial-gradient(circle, #dc4d07 0%, rgba(39, 39, 39, 0) 100%);
   height: 176px;
   width: 176px;
@@ -82,19 +83,19 @@ body {
   position: relative;
   top: -20px;
 }
-.home .main .main--heading {
+.home .main .main__heading {
   font-size: 28px;
 }
-.home .main .main--paragraph {
+.home .main .main__paragraph {
   font-size: 16px;
   height: 65px;
   width: 160px;
 }
-.home .home--scroll-link-text {
+.home .scroll-link-text {
   font-size: 14px;
   text-align: center;
 }
-.home .home--scroll-link-text .home--scroll-link {
+.home .scroll-link-text .scroll-link-text__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -124,23 +125,23 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.projects .project-container .project-container--title {
+.projects .project-container .project-container__title {
   font-size: 24px;
   font-weight: normal;
   text-decoration: underline;
   margin-top: 10px;
 }
-.projects .project-container .project-container--desc {
+.projects .project-container .project-container__desc {
   text-align: center;
   margin: 10px 0;
 }
-.projects .project-container .line-break {
+.projects .project-container .project-container__line-break {
   height: 1px;
   width: 80%;
   background-color: white;
   margin-bottom: 10px;
 }
-.projects .project-container .skills {
+.projects .project-container .project-container__skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -151,7 +152,7 @@ body {
 .projects .project-container .skills-column2 {
   text-align: right;
 }
-.projects .projects--show-more {
+.projects .projects__show-more {
   text-decoration: underline;
   color: #F06F07;
   margin: 8px 0;
@@ -162,21 +163,27 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  max-width: 100vw;
 }
-.about .about--container {
-  margin: 0 20px;
+.about .about-container {
+  padding: 0 20px;
+  max-width: 90vw;
 }
-.about .about--container .container--item {
+.about .about-container .container-item {
   margin: 30px 0;
 }
-.about .about--container .container--item .item--title {
+.about .about-container .container-item .container-item__title {
   text-decoration: underline;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 5px;
 }
-.about .about--container .container--item .item--text {
+.about .about-container .container-item .container-item__text {
   line-height: 120%;
+}
+.about .about-container .about-image {
+  width: 90%;
+  margin-bottom: 10px;
 }
 
 .contact {
@@ -192,30 +199,30 @@ body {
   justify-content: center;
   align-items: center;
 }
-.contact .contact-form .contact-form--field {
+.contact .contact-form .contact-form__field {
   border: solid 1px #c4c4c4;
   border-radius: 5px;
   width: 100%;
   max-width: 420px;
   margin: 8px 0;
 }
-.contact .contact-form .contact-form--field .contact-field--input-name {
+.contact .contact-form .contact-form__field .contact-form__input-name {
   margin-left: 10%;
   padding: 0 5px;
   font-size: 11px;
   background-color: #272727;
 }
-.contact .contact-form .contact-form--field .contact-field--input, .contact .contact-form .contact-form--field .contact-field--textarea {
+.contact .contact-form .contact-form__field .contact-form__input, .contact .contact-form .contact-form__field .contact-form__textarea {
   width: 90%;
   margin: 0 2px;
   background-color: transparent;
   font-size: 14px;
   padding: 5px;
 }
-.contact .contact-form .contact-form--field .contact-field--textarea {
+.contact .contact-form .contact-form__field .contact-form__textarea {
   border: none;
 }
-.contact .contact-form .contact-form--submit {
+.contact .contact-form .contact-form__submit {
   background-color: #F06F07;
   border: none;
   border-radius: 2px;
@@ -254,7 +261,7 @@ body {
   position: absolute;
   right: 18px;
 }
-.menu .menu-logo .menu-logo--text {
+.menu .menu-logo .menu-logo__text {
   font-family: "Sen", sans-serif;
   font-weight: normal;
   font-size: 30px;
@@ -268,7 +275,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.menu .menu-logo .menu-logo--background {
+.menu .menu-logo .menu-logo__background {
   background: radial-gradient(circle, #dc4d07 0%, rgba(39, 39, 39, 0) 100%);
   height: 176px;
   width: 176px;

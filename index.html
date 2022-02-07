@@ -11,24 +11,24 @@
     <!-- Home Page/ Landing -->
     <div class="home" id="home">
         <div class="logo">
-            <h3 class="logo--text">Samuel Jacobs</h3>
-            <div class="logo--background"></div>
+            <h3 class="logo__text">Samuel Jacobs</h3>
+            <div class="logo__background"></div>
         </div>
         <!-- For BEM, main class? -->
-        <main class="main home--intro">
-            <h1 class="main--heading">Hi, I'm Samuel,</h1>
-            <span class="main--paragraph">a web developer based in London, England</span>
+        <main class="main">
+            <h1 class="main__heading">Hi, I'm Samuel,</h1>
+            <span class="main__paragraph">a web developer based in London, England</span>
         </main>
-        <p class="home--scroll-link-text">Click <a href="#projects" class="home--scroll-link">here</a> to see some projects</p>
+        <p class="scroll-link-text">Click <a href="#projects" class="scroll-link-text__link">here</a> to see some projects</p>
     </div>
     <!-- Projects Page -->
     <div class="projects" id="projects">
-        <h3 class="projects--title page--title">Projects</h3>
+        <h3 class="page-title">Projects</h3>
         <div class="project-container" id="p1">
-            <h3 class="project-container--title">Project 1</h3>
-            <p class="project-container--desc">In leo morbi et at ut enim a tortor quam.</p>
-            <div class="line-break"></div>
-            <div class="skills">
+            <h3 class="project-container__title">Project 1</h3>
+            <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+            <div class="project-container__line-break"></div>
+            <div class="project-container__skills">
                 <ul class="skills-column1 skills-list">
                     <li>Vanilla JS</li>
                     <li>HTML5</li>
@@ -40,10 +40,10 @@
             </div>
         </div>
         <div class="project-container" id="p2">
-            <h3 class="project-container--title">Project 2</h3>
-            <p class="project-container--desc">In leo morbi et at ut enim a tortor quam.</p>
-            <div class="line-break"></div>
-            <div class="skills">
+            <h3 class="project-container__title">Project 2</h3>
+            <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+            <div class="project-container__line-break"></div>
+            <div class="project-container__skills">
                 <ul class="skills-column1 skills-list">
                     <li>Vanilla JS</li>
                     <li>HTML5</li>
@@ -55,10 +55,10 @@
             </div>
         </div>
         <div class="project-container" id="p3">
-            <h3 class="project-container--title">Project 3</h3>
-            <p class="project-container--desc">In leo morbi et at ut enim a tortor quam.</p>
-            <div class="line-break"></div>
-            <div class="skills">
+            <h3 class="project-container__title">Project 3</h3>
+            <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+            <div class="project-container__line-break"></div>
+            <div class="project-container__skills">
                 <ul class="skills-column1 skills-list">
                     <li>Vanilla JS</li>
                     <li>HTML5</li>
@@ -69,39 +69,41 @@
                 </ul>
             </div>
         </div>
-        <a href="!#" class="projects--show-more">show more</a>
+        <div class="projects__show-more">show more</div>
         <a href="#about" class="next-section">
             <img src="./svg/down-arrow.svg" alt="next section">
         </a>
     </div>
     <!-- About Page -->
     <div class="about" id="about">
-        <h3 class="about--title page--title">About</h3>
-        <div class="about--container">
-            <div class="container--item web-developer">
-                <h4 class="item--title">Web Developer</h4>
-                <p class="item--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <h3 class="page-title">About</h3>
+        <div class="about-container">
+            <div class="container-item web-developer">
+                <h4 class="container-item__title">Web Developer</h4>
+                <p class="container-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Nullam dui, faucibus purus nulla enim. Lorem aliquet imperdiet diam rhoncus, 
                     et lobortis. Accumsan amet tellus ultrices sagittis ullamcorper. Tincidunt 
                     condimentum neque euismod cursus ultrices. Vel nunc, leo commodo a curabitur 
                     enim felis elit nunc. </p>
             </div>
-            <div class="container--item education">
-                <h4 class="item--title">Education</h4>
-                <p class="item--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <div class="container-item education">
+                <h4 class="container-item__title">Education</h4>
+                <p class="container-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Nullam dui, faucibus purus nulla enim. Lorem aliquet imperdiet diam rhoncus, 
                     et lobortis. Accumsan amet tellus ultrices sagittis ullamcorper. Tincidunt 
                     condimentum neque euismod cursus ultrices. Vel nunc, leo commodo a curabitur 
                     enim felis elit nunc. </p>
             </div>
-            <div class="container--item photography">
-                <h4 class="item--title">Photography</h4>
-                <p class="item--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <div class="container-item photography">
+                <h4 class="container-item__title">Photography</h4>
+                <p class="container-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Nullam dui, faucibus purus nulla enim. Lorem aliquet imperdiet diam rhoncus, 
                     et lobortis. Accumsan amet tellus ultrices sagittis ullamcorper. Tincidunt 
                     condimentum neque euismod cursus ultrices. Vel nunc, leo commodo a curabitur 
                     enim felis elit nunc. </p>
             </div>
+
+            <img src="./images/2140CCA5-54FC-411D-AC9C-90446BF475C3.jpg" alt="Samuel Jacobs" class="about-image">
         </div>
 
         <!-- Add image! -->
@@ -111,25 +113,25 @@
     </div>
     <!-- Contact Page -->
     <div class="contact" id="contact">
-            <h3 class="contact--title page--title">Contact Me</h3>
+            <h3 class="page-title">Contact Me</h3>
             <form class="contact-form">
-            <fieldset class="contact-form--field">
-                <legend class="contact-field--input-name">First name</legend>
-                <input class="contact-field--input" type="text" placeholder="John" required>
+            <fieldset class="contact-form__field">
+                <legend class="contact-form__input-name">First name</legend>
+                <input class="contact-form__input" type="text" placeholder="John" required>
             </fieldset>
-            <fieldset class="contact-form--field">
-                    <legend class="contact-field--input-name">Last name</legend>
-                    <input class="contact-field--input" type="text" placeholder="Doe" required>
+            <fieldset class="contact-form__field">
+                    <legend class="contact-form__input-name">Last name</legend>
+                    <input class="contact-form__input" type="text" placeholder="Doe" required>
             </fieldset>
-            <fieldset class="contact-form--field">
-                    <legend class="contact-field--input-name">Email</legend>
-                    <input class="contact-field--input" type="email" placeholder="johndoe@gmail.com" required>
+            <fieldset class="contact-form__field">
+                    <legend class="contact-form__input-name">Email</legend>
+                    <input class="contact-form__input" type="email" placeholder="johndoe@gmail.com" required>
             </fieldset>
-            <fieldset class="contact-form--field">
-                    <legend class="contact-field--input-name">Message</legend>
-                    <textarea name="" id="" cols="30" rows="10" class="contact-field--textarea" placeholder="Write your message here..." required></textarea>
+            <fieldset class="contact-form__field">
+                    <legend class="contact-form__input-name">Message</legend>
+                    <textarea name="" id="" cols="30" rows="10" class="contact-form__textarea" placeholder="Write your message here..." required></textarea>
             </fieldset>
-            <input type="submit" class="contact-form--submit">
+            <input type="submit" class="contact-form__submit">
         </form>
 
         <div class="social-icons">
@@ -160,8 +162,8 @@
     
     <div class="menu" id="menu">
         <div class="menu-logo">
-            <h3 class="menu-logo--text">Samuel Jacobs</h3>
-            <div class="menu-logo--background"></div>
+            <h3 class="menu-logo__text">Samuel Jacobs</h3>
+            <div class="menu-logo__background"></div>
         </div>
         <nav class="nav-buttons">
             <a href="#home" class="menu-btn">Home</a>

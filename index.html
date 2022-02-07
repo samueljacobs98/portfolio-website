@@ -10,7 +10,7 @@
 <body>
     <!-- Home Page/ Landing -->
     <div class="home" id="home">
-        <div class="home--logo">
+        <div class="logo">
             <h3 class="logo--text">Samuel Jacobs</h3>
             <div class="logo--background"></div>
         </div>
@@ -28,6 +28,20 @@
             <h3 class="project-container--title">Project 1</h3>
             <p class="project-container--desc">In leo morbi et at ut enim a tortor quam.</p>
             <div class="line-break"></div>
+            <!-- <div class="project-links remove-element">
+                <div class="code link-field">
+                    <p>Code:</p>
+                    <a href="#" class="link-icon">
+                        <img src="../svg/github-round.svg" alt="open github link" class="github-btn">
+                    </a>
+                </div>
+                <div class="preview link-field">
+                    <p>Preview:</p>
+                    <a href="#" class="link-icon">
+                        <img src="../svg/preview-round.svg" alt="open preview link" class="preview-btn">
+                    </a>
+                </div>
+            </div> -->
             <div class="skills">
                 <ul class="skills-column1 skills-list">
                     <li>Vanilla JS</li>
@@ -115,19 +129,19 @@
             <form class="contact-form">
             <fieldset class="contact-form--field">
                 <legend class="contact-field--input-name">First name</legend>
-                <input class="contact-field--input" type="text" placeholder="John">
+                <input class="contact-field--input" type="text" placeholder="John" required>
             </fieldset>
             <fieldset class="contact-form--field">
                     <legend class="contact-field--input-name">Last name</legend>
-                    <input class="contact-field--input" type="text" placeholder="Doe">
+                    <input class="contact-field--input" type="text" placeholder="Doe" required>
             </fieldset>
             <fieldset class="contact-form--field">
                     <legend class="contact-field--input-name">Email</legend>
-                    <input class="contact-field--input" type="email" placeholder="johndoe@gmail.com">
+                    <input class="contact-field--input" type="email" placeholder="johndoe@gmail.com" required>
             </fieldset>
             <fieldset class="contact-form--field">
                     <legend class="contact-field--input-name">Message</legend>
-                    <textarea name="" id="" cols="30" rows="10" class="contact-field--textarea" placeholder="Write your message here..."></textarea>
+                    <textarea name="" id="" cols="30" rows="10" class="contact-field--textarea" placeholder="Write your message here..." required></textarea>
             </fieldset>
             <input type="submit" class="contact-form--submit">
         </form>
@@ -146,8 +160,43 @@
     </div>
 
     <!-- Fixed Elements -->
+
+    <!-- Menu Button -->
+    <img src="./svg/hamburger.svg" alt="open menu" class="hamburger">
+
+    <!-- Back-to-top -->
     <a href="#home" class="back-to-top">
         <img src="./svg/to-top.svg" alt="back-to-top">
     </a>
+
+    <!-- Phone Menu -->
+    <img src="./svg/close-button.svg" alt="open menu" class="close-btn">
+    
+    <div class="menu" id="menu">
+        <div class="menu-logo">
+            <h3 class="menu-logo--text">Samuel Jacobs</h3>
+            <div class="menu-logo--background"></div>
+        </div>
+        <nav class="nav-buttons">
+            <a href="#home" class="menu-btn">Home</a>
+            <a href="#projects" class="menu-btn">Projects</a>
+            <a href="#about" class="menu-btn">About</a>
+            <a href="#contact" class="menu-btn">Contact</a>
+        </nav>
+
+        <footer class="menu-social-icons">
+            <a href="https://github.com" class="social-icon">
+                <img src="../svg/github.svg" alt="github link">
+            </a>
+            <a href="https://linkedin.com" class="social-icon">
+                <img src="../svg/linkedin.svg" alt="linked in link">
+            </a>
+            <a href="https://instagram.com" class="social-icon">
+                <img src="../svg/instagram.svg" alt="instagram link">
+            </a>
+        </footer>
+    </div>
+
+    <script src="./javascript/script.js"></script>
 </body>
 </html>

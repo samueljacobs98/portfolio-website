@@ -10,7 +10,6 @@
 
 body {
   background-color: #272727;
-  margin: 0.625rem 0;
   background: #272727;
   color: white;
 }
@@ -46,7 +45,38 @@ body {
   bottom: 18px;
 }
 
-.logo .logo__text {
+.home {
+  display: grid;
+  grid-template-areas: "header" "main" "scroll-link";
+  justify-content: center;
+  align-content: space-around;
+  min-height: 100vh;
+  width: 100%;
+}
+.home .header {
+  width: 100%;
+  background-color: #272727;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.home .header .desktop-nav {
+  display: none;
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+.home .header .desktop-nav .desktop-nav__button {
+  margin-left: 3.5rem;
+  text-decoration: none;
+}
+.home .header .desktop-nav .desktop-nav__button:hover {
+  text-decoration: underline;
+}
+.home .header .desktop-nav .desktop-nav__button:focus {
+  color: orange;
+}
+.home .header .logo .logo__text {
   font-family: "Sen", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
@@ -59,24 +89,8 @@ body {
   position: relative;
   z-index: 1;
 }
-.logo .logo__background {
-  background: radial-gradient(circle, #dc4d07 0%, rgba(39, 39, 39, 0) 100%);
-  height: 176px;
-  width: 11rem;
-  border-radius: 50%;
-  position: relative;
-  z-index: -1;
-  top: -8.75rem;
-}
-
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  min-height: 100vh;
-}
 .home .main {
+  grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -90,6 +104,7 @@ body {
   min-height: 4.1rem;
 }
 .home .scroll-link-text {
+  grid-area: scroll-link;
   font-size: 0.875rem;
   text-align: center;
 }
@@ -235,7 +250,7 @@ body {
   margin-top: 0.625rem;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.contact .social-icons {
+.contact .mobile-social-icons {
   width: 9.375rem;
   margin: 0.625rem 0;
   display: flex;
@@ -315,6 +330,28 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .page-title {
+    margin-top: 10rem;
+  }
+
+  .home .header {
+    position: fixed;
+    top: 2.5rem;
+  }
+  .home .header .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .back-to-top {
+    display: none;
+  }
+
   .home .main .main__heading {
     font-size: 4.5rem;
   }
@@ -322,10 +359,17 @@ body {
     font-size: 1.5rem;
   }
 
+  .projects {
+    justify-content: space-evenly;
+  }
   .projects .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.875rem;
+  }
+
+  .contact .mobile-social-icons {
+    display: none;
   }
 }
 .show-element {

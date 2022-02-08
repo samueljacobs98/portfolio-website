@@ -8,64 +8,95 @@
     <link rel="stylesheet" href="./dist/style.css">
 </head>
 <body>
+    <!-- Phone Menu -->
+    <img src="./svg/close-button.svg" alt="open menu" class="close-btn">
+    
+    <div class="menu" id="menu">
+        <div class="menu-logo">
+            <h3 class="menu-logo__text">Samuel Jacobs</h3>
+            <div class="menu-logo__background"></div>
+        </div>
+        <nav class="nav-buttons">
+            <a href="#home" class="menu-btn">Home</a>
+            <a href="#projects" class="menu-btn">Projects</a>
+            <a href="#about" class="menu-btn">About</a>
+            <a href="#contact" class="menu-btn">Contact</a>
+        </nav>
+
+        <footer class="menu-social-icons">
+            <a href="https://github.com" class="social-icon">
+                <img src="./svg/github.svg" alt="github link">
+            </a>
+            <a href="https://linkedin.com" class="social-icon">
+                <img src="./svg/linkedin.svg" alt="linked in link">
+            </a>
+            <a href="https://instagram.com" class="social-icon">
+                <img src="./svg/instagram.svg" alt="instagram link">
+            </a>
+        </footer>
+    </div>
     <!-- Home Page/ Landing -->
     <div class="home" id="home">
-        <div class="logo">
-            <h3 class="logo__text">Samuel Jacobs</h3>
-            <div class="logo__background"></div>
+        <div class="header">
+            <div class="logo">
+                <h3 class="logo__text">Samuel Jacobs</h3>
+                <div class="logo__background"></div>
+            </div>
         </div>
         <main class="main">
             <h1 class="main__heading">Hi, I'm Samuel,</h1>
-            <span class="main__paragraph">a web developer based in London, England</span>
+            <span class="main__paragraph">a web developer<br> based in London,<br> England</span>
         </main>
         <p class="scroll-link-text">Click <a href="#projects" class="scroll-link-text__link">here</a> to see some projects</p>
     </div>
     <!-- Projects Page -->
     <div class="projects" id="projects">
         <h3 class="page-title">Projects</h3>
-        <div class="project-container" id="p1">
-            <h3 class="project-container__title">Project 1</h3>
-            <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
-            <div class="project-container__line-break"></div>
-            <div class="project-container__skills">
-                <ul class="skills-column1 skills-list">
-                    <li>Vanilla JS</li>
-                    <li>HTML5</li>
-                </ul>
-                <ul class="skills-column2 skills-list">
-                    <li>CSS</li>
-                    <li>Figma</li>
-                </ul>
+        <div class="projects-container">
+            <div class="project-container" id="p1">
+                <h3 class="project-container__title">Project 1</h3>
+                <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+                <div class="project-container__line-break"></div>
+                <div class="project-container__skills">
+                    <ul class="skills-column1 skills-list">
+                        <li>Vanilla JS</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <ul class="skills-column2 skills-list">
+                        <li>CSS</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="project-container" id="p2">
-            <h3 class="project-container__title">Project 2</h3>
-            <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
-            <div class="project-container__line-break"></div>
-            <div class="project-container__skills">
-                <ul class="skills-column1 skills-list">
-                    <li>Vanilla JS</li>
-                    <li>HTML5</li>
-                </ul>
-                <ul class="skills-column2 skills-list">
-                    <li>CSS</li>
-                    <li>Figma</li>
-                </ul>
+            <div class="project-container" id="p2">
+                <h3 class="project-container__title">Project 2</h3>
+                <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+                <div class="project-container__line-break"></div>
+                <div class="project-container__skills">
+                    <ul class="skills-column1 skills-list">
+                        <li>Vanilla JS</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <ul class="skills-column2 skills-list">
+                        <li>CSS</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="project-container" id="p3">
-            <h3 class="project-container__title">Project 3</h3>
-            <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
-            <div class="project-container__line-break"></div>
-            <div class="project-container__skills">
-                <ul class="skills-column1 skills-list">
-                    <li>Vanilla JS</li>
-                    <li>HTML5</li>
-                </ul>
-                <ul class="skills-column2 skills-list">
-                    <li>CSS</li>
-                    <li>Figma</li>
-                </ul>
+            <div class="project-container" id="p3">
+                <h3 class="project-container__title">Project 3</h3>
+                <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+                <div class="project-container__line-break"></div>
+                <div class="project-container__skills">
+                    <ul class="skills-column1 skills-list">
+                        <li>Vanilla JS</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <ul class="skills-column2 skills-list">
+                        <li>CSS</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="projects__show-more">show more</div>
@@ -155,34 +186,6 @@
     <a href="#home" class="back-to-top">
         <img src="./svg/to-top.svg" alt="back-to-top">
     </a>
-
-    <!-- Phone Menu -->
-    <img src="./svg/close-button.svg" alt="open menu" class="close-btn">
-    
-    <div class="menu" id="menu">
-        <div class="menu-logo">
-            <h3 class="menu-logo__text">Samuel Jacobs</h3>
-            <div class="menu-logo__background"></div>
-        </div>
-        <nav class="nav-buttons">
-            <a href="#home" class="menu-btn">Home</a>
-            <a href="#projects" class="menu-btn">Projects</a>
-            <a href="#about" class="menu-btn">About</a>
-            <a href="#contact" class="menu-btn">Contact</a>
-        </nav>
-
-        <footer class="menu-social-icons">
-            <a href="https://github.com" class="social-icon">
-                <img src="./svg/github.svg" alt="github link">
-            </a>
-            <a href="https://linkedin.com" class="social-icon">
-                <img src="./svg/linkedin.svg" alt="linked in link">
-            </a>
-            <a href="https://instagram.com" class="social-icon">
-                <img src="./svg/instagram.svg" alt="instagram link">
-            </a>
-        </footer>
-    </div>
 
     <script src="./javascript/script.js"></script>
 </body>

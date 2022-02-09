@@ -204,68 +204,76 @@ width: 100%;
     justify-content: space-between;
     min-height: 100vh;
 
-    .desktop-container {
-        .project-expanded {
-            display: none;
+    .projects-container {
+        .projects__show-more {
+            text-decoration: underline;
+            text-align: center;
+            color: $orange;
+            margin: $margin-small 0;
         }
 
-        .projects-container {
-            .projects__show-more {
+        .project-container {
+            font-family: $font-secondary;
+            width: 15rem;
+            min-height: 11.25rem;
+            margin: $margin 0;
+            border: 1px solid $grey;
+            background-color: $background-colour;
+            padding: $margin 0;
+            align-self: center;
+
+    
+            color: $white;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .project-container__title {
+                font-size: $mobile-quanternnary-size;
+                font-weight: normal;
                 text-decoration: underline;
+            }
+        
+            .project-container__desc {
                 text-align: center;
-                color: $orange;
-                margin: $margin-small 0;
-            }
-
-            .project-container {
-                font-family: $font-secondary;
-                width: 15rem;
-                min-height: 11.25rem;
                 margin: $margin 0;
-                border: 1px solid $grey;
-                background-color: $background-colour;
-        
-                color: $white;
-        
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .project-container__title {
-                    font-size: $mobile-quanternnary-size;
-                    font-weight: normal;
-                    text-decoration: underline;
-                    margin-top: $margin;
-                }
-            
-                .project-container__desc {
-                    text-align: center;
-                    margin: $margin 0;
-                }
-            
-                .project-container__line-break {
-                    height: 1px;
-                    width: 80%;
-                    background-color: white;
-                    margin-bottom: $margin;
-                }
-
-                .project-container__skills {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                }
-
-                .skills-list {
-                    list-style: none;
-                    padding: 0;
-                }
-            
-                .skills-column2 {
-                    text-align: right;
-                }
             }
-        }   
-    }
+            
+            .project-container__desc-long {
+                display: none;
+            }
+
+            .showDesc {
+                display: block;
+            }
+
+            .project-container__line-break {
+                height: 1px;
+                width: 80%;
+                background-color: white;
+                margin-bottom: $margin;
+            }
+
+            .project-container__skills {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .skills-list {
+                list-style: none;
+                padding: 0;
+            }
+        
+            .skills-column2 {
+                text-align: right;
+            }
+        }
+
+        .project-container:hover {
+            cursor: pointer;
+        }
+    }   
 }
 
 
@@ -278,10 +286,6 @@ width: 100%;
 
     .about-container {
         padding: 0 20px;
-        
-
-        // display: grid;
-        // align-items: center;
 
         .container-item {
             margin: $margin-big 0;
@@ -384,6 +388,7 @@ width: 100%;
 }
 
 // Menu
+
 .menu {
     background: $background-colour;
 
@@ -535,92 +540,33 @@ width: 100%;
     // Projects
         // Display projects horizontally and open downwards
     .projects {
-        justify-content: center;
+        justify-content: space-around;
 
-        position: relative;
+        .projects-container {
+            display: grid;
+            grid-template-areas: 
+            "p1 p2 p3"
+            "sm sm sm";
 
-        #to-about {
-            position: absolute;
-            transform: translateY(22rem);
-        }
+            column-gap: $margin-big;
 
-        .desktop-container {
-            .project-expanded {
-                .project-expanded__title {
-                    font-size: $tablet-secondary-size;
-                }
-
-                .project-expanded__img-placeholder {
-                    background-color: #c4c4c4;
-                    margin: $margin-small;
-                    padding: $margin-small;
-                    width: 100%;
-                    height: 100%;
-                    max-height: 400px;
-                }
-
-                .project-expanded__text {
-                    line-height: 150%;
-                    border: 1px solid $grey;
-                }
-
-                .project-expanded__skills {
-                    list-style: none;
-                    padding: 0;
-                    
-                    align-self: center;
-
-                    width: 95%;
-                    margin-top: $margin-small;
-                    
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    flex-wrap: wrap;
-                    
-                    li {
-                        flex-basis: 25%;
-                        text-align: center;
-                    }
-
-                    li:first-of-type {
-                        text-align: left;
-                    }
-
-                    li:nth-of-type(4n) {
-                        text-align: right;
-                    }
-                }
+            #projects-title {
+                grid-area: pt;
             }
 
-            .projects-container {
-                display: grid;
-                grid-template-areas: 
-                "pt pt pt"
-                "p1 p2 p3"
-                "sm sm sm";
-    
-                #projects-title {
-                    grid-area: pt;
-                }
-    
-                #p1 {
-                    grid-area: p1
-                }
-                #p2 {
-                    grid-area: p2
-                }
-                #p3 {
-                    grid-area: p3
-                }
-                .projects__show-more {
-                    grid-area: sm;
-                }
-    
-                column-gap: $margin-big;
+            #p1 {
+                grid-area: p1
+            }
+            #p2 {
+                grid-area: p2
+            }
+            #p3 {
+                grid-area: p3
+            }
+            .projects__show-more {
+                grid-area: sm;
             }
         }
-
     }
 
     // About
@@ -635,73 +581,24 @@ width: 100%;
         }
 }
 
+@media screen and (min-width: 900px) {
+    .projects {
+        .projects-container {
+            .project-container {
+                min-width: 18rem;
+            }
+        }
+    }
+}
+
+
 @media screen and (min-width: 1064px) {
 
     // Home
         // Nothing to change
 
     // Projects
-        //  Position projects (add container, 2 columns)
-        //  Change .projects-container to 2 columns
-        .projects {
-            .desktop-container {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: $margin-nav;
-
-                .project-expanded {
-                    padding-top: calc(#{$margin} + #{$margin-big});
-                    padding-left: $margin-big;
-
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    
-                    .project-expanded__text {
-                        max-width: 50ch;
-                        margin-top: $margin;
-                        padding: $margin;
-                        justify-self: start;
-                    }
-                }
-                
-                .projects-container {
-                    max-width: 100%;
-
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-areas: 
-                    "title title"
-                    "p1 p2"
-                    "p3 ."
-                    "sm sm";
-
-                    #projects-title {
-                        text-align: center;
-                        padding-left: $margin-big;
-                        margin-top: 0;
-                        grid-area: title;
-                    }
-
-                    #p1 {
-                        grid-area: p1;
-                    }
-
-                    #p2 {
-                        grid-area: p2;
-                    }
-
-                    #p3 {
-                        grid-area: p3;
-                    }
-                    
-                    .projects__show-more {
-                        text-align: center;
-                        grid-area: sm;
-                    }
-                }
-            }
-        }
+        //  Nothing to Change
 
     // About
         // Position text and image (add container, 3 columns, grid-area-template)

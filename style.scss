@@ -38,6 +38,10 @@ $blue: #A0D2F3;
 
 // Code
 // Setup
+html {
+    scroll-behavior: smooth;
+}
+
 *, *::before, *::after {
     margin: 0;
     border: 0;

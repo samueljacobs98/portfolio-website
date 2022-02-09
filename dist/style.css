@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;700&family=Sen:wght@400;700;800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 *, *::before, *::after {
   margin: 0;
   border: 0;

@@ -127,7 +127,16 @@ body {
   justify-content: space-between;
   min-height: 100vh;
 }
-.projects .projects-container .project-container {
+.projects .desktop-container .project-expanded {
+  display: none;
+}
+.projects .desktop-container .projects-container .projects__show-more {
+  text-decoration: underline;
+  text-align: center;
+  color: #F06F07;
+  margin: 0.5rem 0;
+}
+.projects .desktop-container .projects-container .project-container {
   font-family: "Sen", sans-serif;
   width: 15rem;
   min-height: 11.25rem;
@@ -139,53 +148,45 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.projects .projects-container .project-container .project-container__title {
+.projects .desktop-container .projects-container .project-container .project-container__title {
   font-size: 1.5rem;
   font-weight: normal;
   text-decoration: underline;
   margin-top: 0.625rem;
 }
-.projects .projects-container .project-container .project-container__desc {
+.projects .desktop-container .projects-container .project-container .project-container__desc {
   text-align: center;
   margin: 0.625rem 0;
 }
-.projects .projects-container .project-container .project-container__line-break {
+.projects .desktop-container .projects-container .project-container .project-container__line-break {
   height: 1px;
   width: 80%;
   background-color: white;
   margin-bottom: 0.625rem;
 }
-.projects .projects-container .project-container .project-container__skills {
+.projects .desktop-container .projects-container .project-container .project-container__skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.projects .projects-container .project-container .skills-list {
+.projects .desktop-container .projects-container .project-container .skills-list {
   list-style: none;
   padding: 0;
 }
-.projects .projects-container .project-container .skills-column2 {
+.projects .desktop-container .projects-container .project-container .skills-column2 {
   text-align: right;
-}
-.projects .projects__show-more {
-  text-decoration: underline;
-  color: #F06F07;
-  margin: 0.5rem 0;
 }
 
 .about {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
+  justify-items: center;
 }
 .about .about-container {
   padding: 0 20px;
-  max-width: 75ch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .about .about-container .container-item {
   margin: 1.875rem 0;
+  max-width: 40ch;
 }
 .about .about-container .container-item .container-item__title {
   text-decoration: underline;
@@ -360,16 +361,141 @@ body {
   }
 
   .projects {
-    justify-content: space-evenly;
+    justify-content: center;
+    position: relative;
   }
-  .projects .projects-container {
+  .projects #to-about {
+    position: absolute;
+    transform: translateY(22rem);
+  }
+  .projects .desktop-container .project-expanded .project-expanded__title {
+    font-size: 1.5rem;
+  }
+  .projects .desktop-container .project-expanded .project-expanded__img-placeholder {
+    background-color: #c4c4c4;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+  }
+  .projects .desktop-container .project-expanded .project-expanded__text {
+    line-height: 150%;
+    border: 1px solid #c4c4c4;
+  }
+  .projects .desktop-container .project-expanded .project-expanded__skills {
+    list-style: none;
+    padding: 0;
+    align-self: center;
+    width: 95%;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .projects .desktop-container .project-expanded .project-expanded__skills li {
+    flex-basis: 25%;
+    text-align: center;
+  }
+  .projects .desktop-container .project-expanded .project-expanded__skills li:first-of-type {
+    text-align: left;
+  }
+  .projects .desktop-container .project-expanded .project-expanded__skills li:nth-of-type(4n) {
+    text-align: right;
+  }
+  .projects .desktop-container .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "pt pt pt" "p1 p2 p3" "sm sm sm";
     column-gap: 1.875rem;
+  }
+  .projects .desktop-container .projects-container #projects-title {
+    grid-area: pt;
+  }
+  .projects .desktop-container .projects-container #p1 {
+    grid-area: p1;
+  }
+  .projects .desktop-container .projects-container #p2 {
+    grid-area: p2;
+  }
+  .projects .desktop-container .projects-container #p3 {
+    grid-area: p3;
+  }
+  .projects .desktop-container .projects-container .projects__show-more {
+    grid-area: sm;
   }
 
   .contact .mobile-social-icons {
     display: none;
+  }
+}
+@media screen and (min-width: 1064px) {
+  .projects .desktop-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.5rem;
+  }
+  .projects .desktop-container .project-expanded {
+    padding-top: calc(0.625rem + 1.875rem);
+    padding-left: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projects .desktop-container .project-expanded .project-expanded__text {
+    max-width: 50ch;
+    margin-top: 0.625rem;
+    padding: 0.625rem;
+    justify-self: start;
+  }
+  .projects .desktop-container .projects-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "p1 p2" "p3 ." "sm sm";
+  }
+  .projects .desktop-container .projects-container #projects-title {
+    text-align: center;
+    padding-left: 1.875rem;
+    margin-top: 0;
+    grid-area: title;
+  }
+  .projects .desktop-container .projects-container #p1 {
+    grid-area: p1;
+  }
+  .projects .desktop-container .projects-container #p2 {
+    grid-area: p2;
+  }
+  .projects .desktop-container .projects-container #p3 {
+    grid-area: p3;
+  }
+  .projects .desktop-container .projects-container .projects__show-more {
+    text-align: center;
+    grid-area: sm;
+  }
+
+  .about .about-container {
+    margin: 1.875rem 0;
+    max-width: 90%;
+    display: grid;
+    grid-template-areas: "img web edu" "img pho .";
+    gap: 40px;
+  }
+  .about .about-container .container-item {
+    margin: 0;
+  }
+  .about .about-container .web-developer {
+    grid-area: web;
+  }
+  .about .about-container .education {
+    grid-area: edu;
+  }
+  .about .about-container .photography {
+    grid-area: pho;
+  }
+  .about .about-container .about-image {
+    grid-area: img;
+    width: 300px;
   }
 }
 .show-element {

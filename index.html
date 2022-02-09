@@ -16,7 +16,7 @@
             <h3 class="menu-logo__text">Samuel Jacobs</h3>
             <div class="menu-logo__background"></div>
         </div>
-        <nav class="nav-buttons">
+        <nav class="nav-buttons" aria-label="section navigation">
             <a href="#home" class="menu-btn">Home</a>
             <a href="#projects" class="menu-btn">Projects</a>
             <a href="#about" class="menu-btn">About</a>
@@ -39,9 +39,9 @@
     <div class="home" id="home">
         <div class="header">
             <div class="logo">
-                <h3 class="logo__text">Samuel</span><br>Jacobs</h3>
+                <h2 class="logo__text">Samuel</span><br>Jacobs</h2>
             </div>
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" aria-label="section navigation">
                 <a href="#home" class="desktop-nav__button">Home</a>
                 <a href="#projects" class="desktop-nav__button">Projects</a>
                 <a href="#about" class="desktop-nav__button">About</a>
@@ -56,62 +56,82 @@
     </div>
     <!-- Projects Page -->
     <div class="projects" id="projects">
-        <h3 class="page-title">Projects</h3>
-        <div class="projects-container">
-            <div class="project-container" id="p1">
-                <h3 class="project-container__title">Project 1</h3>
-                <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
-                <div class="project-container__line-break"></div>
-                <div class="project-container__skills">
-                    <ul class="skills-column1 skills-list">
-                        <li>Vanilla JS</li>
-                        <li>HTML5</li>
-                    </ul>
-                    <ul class="skills-column2 skills-list">
-                        <li>CSS</li>
-                        <li>Figma</li>
-                    </ul>
-                </div>
+        <div class="desktop-container">
+            <div class="project-expanded">
+                <h3 class="project-expanded__title">Project 1</h3>
+                <!-- <div class="project-expanded__img-placeholder"></div> -->
+                <p class="project-expanded__text">Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit. Nunc quisque orci imperdiet 
+                    sit bibendum. Faucibus interdum adipiscing placerat diam 
+                    velit ac commodo facilisi. Mauris eget tempor nibh phasellus. 
+                    In scelerisque blandit non duis facilisi cursus et. Dictum 
+                    amet integer non amet imperdiet dui, id varius sed. Risus 
+                    risus senectus eu viverra nisl in velit, integer.
+                </p>
+                <ul class="project-expanded__skills">
+                    <li>Vanilla JS</li>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>Figma</li>
+                </ul>
             </div>
-            <div class="project-container" id="p2">
-                <h3 class="project-container__title">Project 2</h3>
-                <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
-                <div class="project-container__line-break"></div>
-                <div class="project-container__skills">
-                    <ul class="skills-column1 skills-list">
-                        <li>Vanilla JS</li>
-                        <li>HTML5</li>
-                    </ul>
-                    <ul class="skills-column2 skills-list">
-                        <li>CSS</li>
-                        <li>Figma</li>
-                    </ul>
+            <div class="projects-container">
+                <h3 class="page-title" id="projects-title">Projects</h3>
+                <div class="project-container" id="p1">
+                    <h3 class="project-container__title">Project 1</h3>
+                    <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+                    <div class="project-container__line-break"></div>
+                    <div class="project-container__skills">
+                        <ul class="skills-column1 skills-list">
+                            <li>Vanilla JS</li>
+                            <li>HTML5</li>
+                        </ul>
+                        <ul class="skills-column2 skills-list">
+                            <li>CSS</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="project-container" id="p3">
-                <h3 class="project-container__title">Project 3</h3>
-                <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
-                <div class="project-container__line-break"></div>
-                <div class="project-container__skills">
-                    <ul class="skills-column1 skills-list">
-                        <li>Vanilla JS</li>
-                        <li>HTML5</li>
-                    </ul>
-                    <ul class="skills-column2 skills-list">
-                        <li>CSS</li>
-                        <li>Figma</li>
-                    </ul>
+                <div class="project-container" id="p2">
+                    <h2 class="project-container__title">Project 2</h2>
+                    <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+                    <div class="project-container__line-break"></div>
+                    <div class="project-container__skills">
+                        <ul class="skills-column1 skills-list">
+                            <li>Vanilla JS</li>
+                            <li>HTML5</li>
+                        </ul>
+                        <ul class="skills-column2 skills-list">
+                            <li>CSS</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="project-container" id="p3">
+                    <h3 class="project-container__title">Project 3</h3>
+                    <p class="project-container__desc">In leo morbi et at ut enim a tortor quam.</p>
+                    <div class="project-container__line-break"></div>
+                    <div class="project-container__skills">
+                        <ul class="skills-column1 skills-list">
+                            <li>Vanilla JS</li>
+                            <li>HTML5</li>
+                        </ul>
+                        <ul class="skills-column2 skills-list">
+                            <li>CSS</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="projects__show-more">show more</div>
             </div>
         </div>
-        <div class="projects__show-more">show more</div>
-        <a href="#about" class="next-section">
+        <a href="#about" class="next-section" id="to-about">
             <img src="./svg/down-arrow.svg" alt="next section">
         </a>
     </div>
     <!-- About Page -->
     <div class="about" id="about">
-        <h3 class="page-title">About</h3>
+        <h2 class="page-title">About</h2>
         <div class="about-container">
             <div class="container-item web-developer">
                 <h4 class="container-item__title">Web Developer</h4>
@@ -148,7 +168,7 @@
     </div>
     <!-- Contact Page -->
     <div class="contact" id="contact">
-            <h3 class="page-title">Contact Me</h3>
+            <h2 class="page-title">Contact Me</h2>
             <form class="contact-form">
             <fieldset class="contact-form__field">
                 <legend class="contact-form__input-name">First name</legend>

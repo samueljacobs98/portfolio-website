@@ -204,60 +204,67 @@ width: 100%;
     justify-content: space-between;
     min-height: 100vh;
 
-    .projects-container {
-        .project-container {
-            font-family: $font-secondary;
-            width: 15rem;
-            min-height: 11.25rem;
-            margin: $margin 0;
-            border: 1px solid $grey;
-            background-color: $background-colour;
-    
-            color: $white;
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .project-container__title {
-                font-size: $mobile-quanternnary-size;
-                font-weight: normal;
-                text-decoration: underline;
-                margin-top: $margin;
-            }
-        
-            .project-container__desc {
-                text-align: center;
-                margin: $margin 0;
-            }
-        
-            .project-container__line-break {
-                height: 1px;
-                width: 80%;
-                background-color: white;
-                margin-bottom: $margin;
-            }
-
-            .project-container__skills {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .skills-list {
-                list-style: none;
-                padding: 0;
-            }
-        
-            .skills-column2 {
-                text-align: right;
-            }
+    .desktop-container {
+        .project-expanded {
+            display: none;
         }
-    }   
 
-    .projects__show-more {
-        text-decoration: underline;
-        color: $orange;
-        margin: $margin-small 0;
+        .projects-container {
+            .projects__show-more {
+                text-decoration: underline;
+                text-align: center;
+                color: $orange;
+                margin: $margin-small 0;
+            }
+
+            .project-container {
+                font-family: $font-secondary;
+                width: 15rem;
+                min-height: 11.25rem;
+                margin: $margin 0;
+                border: 1px solid $grey;
+                background-color: $background-colour;
+        
+                color: $white;
+        
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .project-container__title {
+                    font-size: $mobile-quanternnary-size;
+                    font-weight: normal;
+                    text-decoration: underline;
+                    margin-top: $margin;
+                }
+            
+                .project-container__desc {
+                    text-align: center;
+                    margin: $margin 0;
+                }
+            
+                .project-container__line-break {
+                    height: 1px;
+                    width: 80%;
+                    background-color: white;
+                    margin-bottom: $margin;
+                }
+
+                .project-container__skills {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .skills-list {
+                    list-style: none;
+                    padding: 0;
+                }
+            
+                .skills-column2 {
+                    text-align: right;
+                }
+            }
+        }   
     }
 }
 
@@ -265,20 +272,20 @@ width: 100%;
 // About Page
 
 .about {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
+    justify-items: center;
 
     .about-container {
         padding: 0 20px;
-        max-width: 75ch;
+        
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        // display: grid;
+        // align-items: center;
 
         .container-item {
             margin: $margin-big 0;
+            max-width: 40ch;
             
             .container-item__title {
                 text-decoration: underline;
@@ -528,13 +535,92 @@ width: 100%;
     // Projects
         // Display projects horizontally and open downwards
     .projects {
-        justify-content: space-evenly;
+        justify-content: center;
 
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: $margin-big;
+        position: relative;
+
+        #to-about {
+            position: absolute;
+            transform: translateY(22rem);
         }
+
+        .desktop-container {
+            .project-expanded {
+                .project-expanded__title {
+                    font-size: $tablet-secondary-size;
+                }
+
+                .project-expanded__img-placeholder {
+                    background-color: #c4c4c4;
+                    margin: $margin-small;
+                    padding: $margin-small;
+                    width: 100%;
+                    height: 100%;
+                    max-height: 400px;
+                }
+
+                .project-expanded__text {
+                    line-height: 150%;
+                    border: 1px solid $grey;
+                }
+
+                .project-expanded__skills {
+                    list-style: none;
+                    padding: 0;
+                    
+                    align-self: center;
+
+                    width: 95%;
+                    margin-top: $margin-small;
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    
+                    li {
+                        flex-basis: 25%;
+                        text-align: center;
+                    }
+
+                    li:first-of-type {
+                        text-align: left;
+                    }
+
+                    li:nth-of-type(4n) {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .projects-container {
+                display: grid;
+                grid-template-areas: 
+                "pt pt pt"
+                "p1 p2 p3"
+                "sm sm sm";
+    
+                #projects-title {
+                    grid-area: pt;
+                }
+    
+                #p1 {
+                    grid-area: p1
+                }
+                #p2 {
+                    grid-area: p2
+                }
+                #p3 {
+                    grid-area: p3
+                }
+                .projects__show-more {
+                    grid-area: sm;
+                }
+    
+                column-gap: $margin-big;
+            }
+        }
+
     }
 
     // About
@@ -550,10 +636,6 @@ width: 100%;
 }
 
 @media screen and (min-width: 1064px) {
-    // Fixed
-        // Navbar
-        // Hide phone menu button
-        // Swap back to top button
 
     // Home
         // Nothing to change
@@ -561,10 +643,102 @@ width: 100%;
     // Projects
         //  Position projects (add container, 2 columns)
         //  Change .projects-container to 2 columns
+        .projects {
+            .desktop-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: $margin-nav;
+
+                .project-expanded {
+                    padding-top: calc(#{$margin} + #{$margin-big});
+                    padding-left: $margin-big;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    
+                    .project-expanded__text {
+                        max-width: 50ch;
+                        margin-top: $margin;
+                        padding: $margin;
+                        justify-self: start;
+                    }
+                }
+                
+                .projects-container {
+                    max-width: 100%;
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: 
+                    "title title"
+                    "p1 p2"
+                    "p3 ."
+                    "sm sm";
+
+                    #projects-title {
+                        text-align: center;
+                        padding-left: $margin-big;
+                        margin-top: 0;
+                        grid-area: title;
+                    }
+
+                    #p1 {
+                        grid-area: p1;
+                    }
+
+                    #p2 {
+                        grid-area: p2;
+                    }
+
+                    #p3 {
+                        grid-area: p3;
+                    }
+                    
+                    .projects__show-more {
+                        text-align: center;
+                        grid-area: sm;
+                    }
+                }
+            }
+        }
 
     // About
         // Position text and image (add container, 3 columns, grid-area-template)
+        .about {
+            .about-container {
+                margin: $margin-big 0;
+                max-width: 90%;
+                display: grid;
+                grid-template-areas: 
+                "img web edu"
+                "img pho .";
+                gap: 40px;
 
+                .container-item {
+                    margin: 0;
+                }
+
+                .web-developer {
+                    grid-area: web;
+                    // max-width: 40ch;
+
+                }
+                .education {
+                    grid-area: edu;
+                    // max-width: 40ch;
+
+                }
+                .photography {
+                    grid-area: pho;
+                    // max-width: 40ch;
+                }
+                .about-image {
+                    grid-area: img;
+                    width: 300px;
+                }
+            }
+        }
     // Contact
         // Nothing to change
 }

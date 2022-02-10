@@ -10,11 +10,15 @@ The design of the portfolio website integrated skills including UX Design, Figma
 
 A wireframe was developed on Figma for both a mobile version and larger screen version of the website. Figma prototyping features were then integrated into the design to create a more accurate representation of how the website should look and function.
 
-Taking a mobile first approach, a basic version of the website was developed using HTML and SCSS.
+Taking a mobile first approach, a basic version of the website was developed using HTML and SCSS, classing the elements using Block Element Modifier (B.E.M.) class naming method. SCSS partials were used to organise the website stylings.
+
+Throughout the project, GitHub was used for version control through the Git Add, Git Commit, and Git Push commands. Branches were made for some features that were then merged back with the master branch after the goal function had been achieved.
 
 Once the basic required elements had been coded and given their fundamental styling, CSS media queries were implemeneted so the design could be adapted to larger screens.
 
 Having utilised media queries to integrate responsiveness into the website, additional styling was added. To improve user expereince, user interaction validation was implemented using basic CSS hover animations to give the user feedback. JavaScript was used to add additional functionality to the website such as the expandable projects on the Project section, the mobile menu overlay, and the typewriter-style greeting on the homepage section.
+
+Lighthouse was used to assess accessibility and SEO on the mobile version and desktop version of the website. Adjustments were made to ensure proper practice had been followed, leading to a 100% accessibility score and 100% SEO score.
 
 ## Links to project
 ### Figma Design

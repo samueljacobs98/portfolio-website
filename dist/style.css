@@ -80,6 +80,9 @@ body {
 .home .header .desktop-nav .desktop-nav__button:focus {
   color: orange;
 }
+.home .header .logo {
+  text-decoration: none;
+}
 .home .header .logo .logo__text {
   font-family: "Sen", sans-serif;
   font-weight: normal;

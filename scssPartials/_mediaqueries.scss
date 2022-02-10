@@ -1,0 +1,178 @@
+@use './scssPartials/variables' as *;
+
+// Media Queries
+@media only screen and (min-width:768px) {
+    // Setup
+        // 
+        .page-title {
+            margin-top: 10rem;
+        }
+
+    // Fixed
+        // Add Nav
+        .home {
+            .header {
+                position: fixed;
+                top: 2.5rem;
+
+                .desktop-nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+        // Hide Phone Menu Button and back-to-top arrow
+        .hamburger {
+            display: none;
+        }
+
+        .mobile-back-to-top {
+            display: none;
+        }
+
+        .back-to-top {
+            display: block;
+        }
+
+        .sidebar-container {
+            display: flex;
+
+            .link-lines {
+                display: none;
+            }
+        }
+
+    // Home
+        // Increase Hero Size
+        .home {
+            .main {
+                .main__heading {
+                    font-size: $tablet-primary-size;
+                }
+            
+                .main__paragraph {
+                    font-size: $tablet-secondary-size;
+                }
+
+                .earth1 {
+                    transform: translate(32%, -40%) scale(0.8)
+                }
+            }
+        }
+    // Projects
+        // Display projects horizontally and open downwards
+    .projects {
+        justify-content: space-around;
+
+        .projects-container {
+            display: grid;
+            grid-template-areas: 
+            "p1 p2 p3"
+            "sm sm sm";
+
+            column-gap: $margin-big;
+
+            #projects-title {
+                grid-area: pt;
+            }
+
+            #p1 {
+                grid-area: p1
+            }
+            #p2 {
+                grid-area: p2
+            }
+            #p3 {
+                grid-area: p3
+            }
+            .projects__show-more {
+                grid-area: sm;
+            }
+        }
+    }
+
+    // About
+        // 
+        .sun, .earth {
+            display: inline-block;
+        }
+
+    // Contact
+        // Remove Social Icons
+        .contact {
+            .mobile-social-icons {
+                display: none;
+            }
+        }
+}
+
+@media screen and (min-width: 900px) {
+    .projects {
+        .projects-container {
+            .project-container {
+                min-width: 18rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1064px) {
+    // Fixed
+        // 
+        .sidebar-container {
+            .link-lines {
+                display: block;
+                height: 100%;
+            }
+        }
+    // Home
+        // Nothing to change
+
+    // Projects
+        //  Nothing to Change
+
+    // About
+        // Position text and image (add container, 3 columns, grid-area-template)
+        .about {
+            .about-container {
+                margin: $margin-big 0;
+                max-width: 90%;
+                display: grid;
+                grid-template-areas: 
+                "img web edu"
+                "img pho .";
+                gap: 40px;
+
+                .container-item {
+                    margin: 0;
+                }
+
+                .web-developer {
+                    grid-area: web;
+                    // max-width: 40ch;
+
+                }
+                .education {
+                    grid-area: edu;
+                    // max-width: 40ch;
+
+                }
+                .photography {
+                    grid-area: pho;
+                    // max-width: 40ch;
+                }
+                .about-image {
+                    grid-area: img;
+                    width: 300px;
+                }
+            }
+
+            .sun2 {
+                left: -60%;
+            }
+        }
+    // Contact
+        // Nothing to change
+}

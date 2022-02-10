@@ -32,7 +32,7 @@ closeBtn.addEventListener("click", function() {
 let i = 0;
 let j = 0;
 const heading = "Hi, I'm Samuel,"
-const para = "a web developer based in London, England"
+const para = "a software engineer based in London, England"
 let speed = 100;
 
 setInterval(function typeWriter() {

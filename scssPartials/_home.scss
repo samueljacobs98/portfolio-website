@@ -1,0 +1,134 @@
+@use './scssPartials/variables' as *;
+
+// Home page
+.home {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "scroll-link";
+    
+    justify-content: center;
+    align-content: space-around;
+    
+    min-height: 100vh;
+    width: 100%;
+    
+        .header {
+            width: 100%;
+    
+            background-color: $background-colour;
+            grid-area: header;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+    
+            .desktop-nav {
+                display: none;
+    
+                font-size: $tablet-secondary-size;
+                
+                max-width: 800px;
+                
+                .desktop-nav__button {
+                    margin-left: $margin-nav;
+                    
+                    text-decoration: none;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+    
+                    &:focus {
+                        color: orange
+                    }
+                }
+            }
+    
+            .logo {
+                text-decoration: none;
+                position: relative;
+                .mars {
+                    position: absolute;
+                    top: -40%;
+                }
+    
+                .logo__text {
+                    font-family: $font-secondary;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    font-size: $mobile-logo-size;
+                    
+                    text-align: center;
+                
+                    width: 8.75rem;
+                    min-height: 5.125rem;
+                
+                    margin: 0 auto;
+                    padding: 0;
+                
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    
+        .main {
+            grid-area: main;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+    
+            .main__heading {
+                font-size: $mobile-primary-size;
+            }
+        
+            .main__paragraph {
+                font-size: $mobile-secondary-size;
+        
+                min-width: 10rem;
+                min-height: 4.1rem;
+    
+                max-width: 20ch;
+            }
+    
+            .earth1 {
+                display: inline-block;
+                position: absolute;
+                align-self: center;
+                transform: translateY(-40%) scale(0.5);
+            }
+        }
+    
+        .scroll-link-text {
+            grid-area: scroll-link;
+    
+            font-size: $mobile-tertiary-size;
+    
+            text-align: center;
+    
+            .scroll-link-text__link {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+    
+                text-decoration: none;
+                color: $background-colour;
+    
+                background-color: $orange;
+    
+                min-width: 2.6rem;
+                min-height: 1.625rem;
+                border-radius: $border-radius;
+    
+                transition: transform .4s cubic-bezier(0.79, 0.03, 0.42, 2.08);
+            }
+    
+            .scroll-link-text__link:hover {
+                transform: scale(1.5);
+                margin: 0 $margin;
+            }
+        }
+    }

@@ -1,0 +1,12 @@
+@use './scssPartials/variables' as *;
+
+// Classes for JS
+    // Show Element Class
+.show-element {
+    visibility: visible;
+}
+
+    // Remove Display
+.remove-element {
+    display: none;
+}

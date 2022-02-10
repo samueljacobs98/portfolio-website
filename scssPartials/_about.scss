@@ -1,0 +1,50 @@
+@use './scssPartials/variables' as *;
+
+// About Page
+.about {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    .about-container {
+        padding: 0 20px;
+
+        .container-item {
+            margin: $margin-big 0;
+            max-width: 40ch;
+            
+            .container-item__title {
+                text-decoration: underline;
+                font-weight: bold;
+                font-size: $mobile-quanternnary-size;
+    
+                margin-bottom: $margin-title;
+            }
+    
+            .container-item__text {
+                line-height: 120%;
+            }
+        }
+
+        .about-image {
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: $margin;
+        }
+    }
+
+    .sun2 {
+        position: absolute;
+        left: -70%;
+
+        transform: translateY(-55%) scale(0.5);
+    }
+
+    .earth2 {
+        position: absolute;
+        right: 5%;
+
+        transform: translateY(50%);
+    }
+
+}

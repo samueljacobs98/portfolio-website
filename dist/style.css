@@ -33,6 +33,12 @@ body {
   transform: scale(1.5);
 }
 
+.sun, .earth {
+  display: none;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .close-btn {
   visibility: hidden;
   z-index: 3;
@@ -107,6 +113,11 @@ body {
 }
 .home .header .logo {
   text-decoration: none;
+  position: relative;
+}
+.home .header .logo .mars {
+  position: absolute;
+  top: -40%;
 }
 .home .header .logo .logo__text {
   font-family: "Sen", sans-serif;
@@ -135,6 +146,12 @@ body {
   min-width: 10rem;
   min-height: 4.1rem;
   max-width: 20ch;
+}
+.home .main .earth1 {
+  display: inline-block;
+  position: absolute;
+  align-self: center;
+  transform: translateY(-40%) scale(0.5);
 }
 .home .scroll-link-text {
   grid-area: scroll-link;
@@ -247,6 +264,16 @@ body {
   max-width: 400px;
   margin-bottom: 0.625rem;
 }
+.about .sun2 {
+  position: absolute;
+  left: -70%;
+  transform: translateY(-55%) scale(0.5);
+}
+.about .earth2 {
+  position: absolute;
+  right: 5%;
+  transform: translateY(50%);
+}
 
 .contact {
   display: flex;
@@ -307,13 +334,10 @@ body {
   background: #272727;
   visibility: hidden;
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 2;
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -326,25 +350,14 @@ body {
   font-family: "Sen", sans-serif;
   font-weight: normal;
   font-size: 1.875rem;
-  color: white;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  width: 8.75rem;
-  min-height: 5.125rem;
-  margin: 0 auto;
-  margin-top: 120px;
-  padding: 0;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
-.menu .menu-logo .menu-logo__background {
-  background: radial-gradient(circle, #dc4d07 0%, rgba(39, 39, 39, 0) 100%);
-  height: 176px;
-  width: 11rem;
-  border-radius: 50%;
-  position: relative;
-  z-index: -1;
-  top: -8.75rem;
+.menu .menu-logo .mars1 {
+  transform: translateY(-80%);
 }
 .menu .nav-buttons {
   display: flex;
@@ -415,6 +428,9 @@ body {
   .home .main .main__paragraph {
     font-size: 1.5rem;
   }
+  .home .main .earth1 {
+    transform: translate(32%, -40%) scale(0.8);
+  }
 
   .projects {
     justify-content: space-around;
@@ -438,6 +454,10 @@ body {
   }
   .projects .projects-container .projects__show-more {
     grid-area: sm;
+  }
+
+  .sun, .earth {
+    display: inline-block;
   }
 
   .contact .mobile-social-icons {
@@ -477,6 +497,9 @@ body {
   .about .about-container .about-image {
     grid-area: img;
     width: 300px;
+  }
+  .about .sun2 {
+    left: -60%;
   }
 }
 .show-element {

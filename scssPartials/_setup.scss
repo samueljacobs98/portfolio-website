@@ -1,0 +1,42 @@
+@use './scssPartials/variables' as *;
+
+// Setup
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    border: 0;
+    color: $white;
+    font-family: $font-primary;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-colour;
+    background: #272727;
+    color: white;
+}
+
+.page-title {
+    font-size: $mobile-logo-size;
+    margin: $margin 0;
+    text-align: center;
+}
+
+.next-section {
+    margin: $margin 0;
+    transition: transform .4s cubic-bezier(0.79, 0.03, 0.42, 2.08);
+}
+
+.next-section:hover {
+    transform: scale(1.5);
+}
+
+.sun, .earth {
+    display: none;
+    opacity: 0.6;
+    pointer-events:none;
+}

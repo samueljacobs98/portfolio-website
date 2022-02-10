@@ -1,0 +1,75 @@
+@use './scssPartials/variables' as *;
+
+// Contact Page
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+
+    .contact-form {    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .contact-form__field {
+            border: solid 1px $grey;
+            border-radius: $border-radius;
+        
+            width: 100%;
+            max-width: 26rem;
+        
+            margin: $margin-small 0;
+    
+            .contact-form__input-name {
+                margin-left: 10%;
+                padding: 0 $margin-title;
+            
+                font-size: $mobile-quinary-size;
+            
+                background-color: $background-colour;
+            }
+            
+            .contact-form__input, .contact-form__textarea {
+                width: 90%;
+                margin: 0 2px;
+            
+                background-color: transparent;
+            
+                font-size: $mobile-tertiary-size;
+                padding: $margin-title;
+            }
+            
+            .contact-form__textarea {
+                border: none;
+            }
+            
+        }
+        .contact-form__submit {
+            background-color: $orange;
+            border: none;
+            border-radius: 2px;
+        
+            font-family: 'Red Hat Mono', monospace;
+            color: $background-colour;
+            font-size: $mobile-tertiary-size;
+        
+            min-width: 66px;
+            min-height: $mobile-primary-size;
+            margin-top: $margin;
+        
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+
+    .mobile-social-icons {
+        width: 9.375rem;
+        margin: $margin 0;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}

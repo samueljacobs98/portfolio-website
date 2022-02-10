@@ -1,0 +1,82 @@
+@use './scssPartials/variables' as *;
+
+// Menu
+.menu {
+    background: $background-colour;
+
+    visibility: hidden;
+    position: fixed;
+    z-index: 2;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .close-btn {
+        position: absolute;
+        right: 18px;
+    }
+
+    .menu-logo {
+        .menu-logo__text {
+            font-family: "Sen", sans-serif;
+            font-weight: normal;
+            font-size: $mobile-logo-size;
+        
+            color: $white;
+        
+            text-transform: uppercase;
+            text-align: center;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .mars1 {
+            transform: translateY(-80%);
+        }
+
+    }
+    
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        min-height: 17rem;
+    
+        position: relative;
+        top: -100px;
+
+        .menu-btn {
+            text-decoration: none;
+            color: white;
+            font-size: $mobile-quanternnary-size;
+            text-align: center;
+        }
+
+        .menu-btn:hover {
+            text-decoration: underline;
+        }
+
+        .menu-btn:focus {
+            color: $orange
+        }
+    }
+    
+    
+    .menu-social-icons {
+        width: 150px;
+        margin-top: 2.5rem;
+    
+        display: flex;
+        justify-content: space-between;
+    
+        position: relative;
+        top: -5rem;
+    }
+}

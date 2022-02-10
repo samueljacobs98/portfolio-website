@@ -1,0 +1,46 @@
+@use './scssPartials/variables' as *;
+
+// Fixed Elements
+
+.close-btn {
+    visibility: hidden;
+    z-index: 3;
+}
+
+.hamburger, .close-btn {
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+
+.hamburger:hover, .close-btn:hover {
+    cursor: pointer;
+}
+
+.mobile-back-to-top {
+    position: fixed;
+    right: 1.2rem;
+    bottom: 1.2rem;
+}
+
+.back-to-top {
+    display: none;
+    color: $grey;
+    font-size: 1rem;
+    position: fixed;
+    left: 10%;
+    bottom: 1.2rem;
+}
+
+.sidebar-container {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 0;
+
+    display: none;
+    flex-direction: column;
+
+    .social-icon {
+        margin: $margin 0;
+    }
+}

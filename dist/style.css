@@ -55,11 +55,23 @@ body {
 }
 
 .back-to-top {
+  display: none;
   color: #c4c4c4;
   font-size: 1rem;
   position: fixed;
   left: 10%;
   bottom: 18px;
+}
+
+.sidebar-container {
+  position: fixed;
+  right: 25px;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+}
+.sidebar-container .social-icon {
+  margin: 0.625rem 0;
 }
 
 .home {
@@ -386,6 +398,17 @@ body {
     display: none;
   }
 
+  .back-to-top {
+    display: block;
+  }
+
+  .sidebar-container {
+    display: flex;
+  }
+  .sidebar-container .link-lines {
+    display: none;
+  }
+
   .home .main .main__heading {
     font-size: 4.5rem;
   }
@@ -427,6 +450,11 @@ body {
   }
 }
 @media screen and (min-width: 1064px) {
+  .sidebar-container .link-lines {
+    display: block;
+    height: 100%;
+  }
+
   .about .about-container {
     margin: 1.875rem 0;
     max-width: 90%;

@@ -96,11 +96,25 @@ body {
 }
 
 .back-to-top {
+    display: none;
     color: $grey;
     font-size: 1rem;
     position: fixed;
     left: 10%;
     bottom: 18px;
+}
+
+.sidebar-container {
+    position: fixed;
+    right: 25px;
+    bottom: 0;
+
+    display: none;
+    flex-direction: column;
+
+    .social-icon {
+        margin: $margin 0;
+    }
 }
 
 // Home page
@@ -545,6 +559,17 @@ width: 100%;
             display: none;
         }
 
+        .back-to-top {
+            display: block;
+        }
+
+        .sidebar-container {
+            display: flex;
+
+            .link-lines {
+                display: none;
+            }
+        }
 
         // Add Social Media Icons
         // Add Sun
@@ -621,7 +646,14 @@ width: 100%;
 
 
 @media screen and (min-width: 1064px) {
-
+    // Fixed
+        // 
+        .sidebar-container {
+            .link-lines {
+                display: block;
+                height: 100%;
+            }
+        }
     // Home
         // Nothing to change
 

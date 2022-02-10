@@ -26,6 +26,11 @@ body {
 
 .next-section {
   margin: 0.625rem 0;
+  transition: transform 0.4s cubic-bezier(0.79, 0.03, 0.42, 2.08);
+}
+
+.next-section:hover {
+  transform: scale(1.5);
 }
 
 .close-btn {
@@ -43,9 +48,17 @@ body {
   cursor: pointer;
 }
 
-.back-to-top {
+.mobile-back-to-top {
   position: fixed;
   right: 18px;
+  bottom: 18px;
+}
+
+.back-to-top {
+  color: #c4c4c4;
+  font-size: 1rem;
+  position: fixed;
+  left: 10%;
   bottom: 18px;
 }
 
@@ -126,6 +139,11 @@ body {
   min-width: 2.6rem;
   min-height: 1.625rem;
   border-radius: 0.4em;
+  transition: transform 0.4s cubic-bezier(0.79, 0.03, 0.42, 2.08);
+}
+.home .scroll-link-text .scroll-link-text__link:hover {
+  transform: scale(1.5);
+  margin: 0 0.625rem;
 }
 
 .projects {
@@ -364,7 +382,7 @@ body {
     display: none;
   }
 
-  .back-to-top {
+  .mobile-back-to-top {
     display: none;
   }
 

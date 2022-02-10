@@ -65,6 +65,11 @@ body {
 
 .next-section {
     margin: $margin 0;
+    transition: transform .4s cubic-bezier(0.79, 0.03, 0.42, 2.08);
+}
+
+.next-section:hover {
+    transform: scale(1.5);
 }
 
 // Fixed Elements
@@ -84,9 +89,17 @@ body {
     cursor: pointer;
 }
 
-.back-to-top {
+.mobile-back-to-top {
     position: fixed;
     right: 18px;
+    bottom: 18px;
+}
+
+.back-to-top {
+    color: $grey;
+    font-size: 1rem;
+    position: fixed;
+    left: 10%;
     bottom: 18px;
 }
 
@@ -200,6 +213,13 @@ width: 100%;
             min-width: 2.6rem;
             min-height: 1.625rem;
             border-radius: $border-radius;
+
+            transition: transform .4s cubic-bezier(0.79, 0.03, 0.42, 2.08);
+        }
+
+        .scroll-link-text__link:hover {
+            transform: scale(1.5);
+            margin: 0 $margin;
         }
     }
 }
@@ -521,7 +541,7 @@ width: 100%;
             display: none;
         }
 
-        .back-to-top {
+        .mobile-back-to-top {
             display: none;
         }
 

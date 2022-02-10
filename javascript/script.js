@@ -25,6 +25,28 @@ closeBtn.addEventListener("click", function() {
     closeBtn.classList.remove("show-element")
 });
 
+
+
+// Home Typewriter
+
+let i = 0;
+let j = 0;
+const heading = "Hi, I'm Samuel,"
+const para = "a web developer based in London, England"
+let speed = 100;
+
+setInterval(function typeWriter() {
+    if (i < heading.length) {
+        document.getElementById("main__heading").innerHTML += heading.charAt(i);
+        i++;
+    } else if (i >= heading.length && j < para.length) {
+        document.getElementById("main__paragraph").innerHTML += para.charAt(j);
+        j++;
+    }
+}, speed)
+
+
+
 // Projects
 
 const projects = document.querySelectorAll(".project-container");

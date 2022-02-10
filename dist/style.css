@@ -106,6 +106,7 @@ body {
   font-size: 1rem;
   min-width: 10rem;
   min-height: 4.1rem;
+  max-width: 20ch;
 }
 .home .scroll-link-text {
   grid-area: scroll-link;
